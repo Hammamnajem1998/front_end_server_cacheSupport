@@ -35,7 +35,7 @@ public class SparkAppMain {
             while ((output = br.readLine()) != null) {
                 System.out.println(output);
             }
-            //test
+        
             conn.disconnect();
 
         } catch (MalformedURLException e) {
