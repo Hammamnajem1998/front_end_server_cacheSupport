@@ -19,7 +19,7 @@ public class SparkAppMain {
             String output1 ="";
             try {
 
-                URL url = new URL("http://172.16.227.50:4567/search/"+req.params(":value"));
+                URL url = new URL("http://192.168.1.102:4567/search/"+req.params(":value"));
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestMethod("GET");
                 conn.setRequestProperty("Accept", "application/json");
@@ -56,7 +56,7 @@ public class SparkAppMain {
             String output1 ="";
             try {
 
-                URL url = new URL("http://172.16.227.50:4567/lookup/"+req.params(":value"));
+                URL url = new URL("http://192.168.1.102:4567/lookup/"+req.params(":value"));
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestMethod("GET");
                 conn.setRequestProperty("Accept", "application/json");
@@ -93,7 +93,7 @@ public class SparkAppMain {
             String output1 ="";
             try {
 
-                URL url = new URL("http://172.16.227.50:4567/buy/"+req.params(":value"));
+                URL url = new URL("http://192.168.1.100:4567/buy/"+req.params(":value"));
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestMethod("GET");
                 conn.setRequestProperty("Accept", "application/json");
