@@ -18,8 +18,9 @@ public class SparkAppMain {
         get("/search/:value", (req, res) ->{
             String output1 ="";
             try {
-
-                URL url = new URL("http://192.168.1.102:4567/search/"+req.params(":value"));
+                String topic =req.params(":value");
+                topic=topic.replaceAll(" ","%20");
+                URL url = new URL("http://192.168.1.102:4567/search/"+topic );
                 HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setRequestMethod("GET");
                 conn.setRequestProperty("Accept", "application/json");
